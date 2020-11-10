@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 const env = new webpack.EnvironmentPlugin({
-  NODE_ENV: process.env.BUILD_MODE == 'umd-min' ? 'production' : 'development'
+  NODE_ENV: 'development'
 })
 const uglify = new webpack.optimize.UglifyJsPlugin({
   sourceMap: true,
