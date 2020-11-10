@@ -27,8 +27,8 @@ const filename = process.env.BUILD_MODE === 'umd'
   ? './dist/react-responsive.js'
   : './dist/react-responsive.min.js'
 const plugins = process.env.BUILD_MODE === 'umd-min'
-  ? [ env, uglify ]
-  : [ env, uglifyLite ]
+  ? [ env ]
+  : [ env ]
 
 module.exports = {
   entry: './src/index.js',
@@ -53,7 +53,6 @@ module.exports = {
       root: 'ReactDOM'
     }
   },
-  plugins,
   resolve: {
     modules: [
       path.resolve('src'),
